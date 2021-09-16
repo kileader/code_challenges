@@ -21,7 +21,7 @@ def get_diameter(length):
             diameter += thickness
         else:
             diameter += thickness * 2
-        length -= math.pi * (diameter - thickness)
+        length -= math.pi * (diameter - thickness * 2)
     return round(diameter / 10000, 4)
 
 
