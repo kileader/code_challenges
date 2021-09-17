@@ -6,7 +6,6 @@ in cm, write a function that returns the diameter of the roll in cm measured
 at its thickest point. Round the result to four places.
 """
 import math
-import decimal
 
 
 def get_diameter(length):
@@ -18,10 +17,12 @@ def get_diameter(length):
 
     while length > 0:
         if length < math.pi * diameter / 2:
+            length -= math.pi * diameter
             diameter += thickness
         else:
+            length -= math.pi * diameter
             diameter += thickness * 2
-        length -= math.pi * (diameter - thickness * 2)
+
     return round(diameter / 10000, 4)
 
 
