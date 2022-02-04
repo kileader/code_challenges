@@ -1,0 +1,1 @@
+Assuming that each switch turns on one light bulb socket, you can have only one working lightbulb screwed in, then switch the lights on one at a time until you see that light is coming from the room. You would have to do that for two sockets then you can know which corresponds to the third.
