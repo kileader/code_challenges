@@ -9,4 +9,4 @@ const redundant = (str) => {
 const returnString = (str) => {
   return str;
 };
-console.log("redundant('str') -> " + redundant("str"));
+console.log('redundant("str") -> \n' + redundant("str"));

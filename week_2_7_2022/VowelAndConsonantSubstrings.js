@@ -77,7 +77,7 @@ const getConsonantSubstrings = (given) => {
   return substrings;
 };
 
-console.log("getVowelSubstrings('apple') -> " + getVowelSubstrings("apple"));
-console.log("getVowelSubstrings('hmm') -> " + getVowelSubstrings("hmm"));
-console.log("getConsonantSubstrings('aviation') -> " + getConsonantSubstrings("aviation"));
-console.log("getConsonantSubstrings('motor') -> " + getConsonantSubstrings("motor"));
+console.log('getVowelSubstrings("apple") -> ' + getVowelSubstrings("apple"));
+console.log('getVowelSubstrings("hmm") -> ' + getVowelSubstrings("hmm"));
+console.log('getConsonantSubstrings("aviation") -> ' + getConsonantSubstrings("aviation"));
+console.log('getConsonantSubstrings("motor") -> ' + getConsonantSubstrings("motor"));
