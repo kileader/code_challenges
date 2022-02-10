@@ -28,7 +28,7 @@ const tune = (freqs) => {
   let ans = [];
   let inTune = [329.63, 246.94, 196.0, 146.83, 110.0, 82.41];
   for (let i = 0; i < 6; i++) {
-    let off = (freqs[i] * 100) / inTune[i] - 100;
+    let off = Math.round((freqs[i] * 100) / inTune[i] - 100);
     if (freqs[i] == 0) {
       ans.push(" - ");
     } else if (-1 < off && off < 1) {
