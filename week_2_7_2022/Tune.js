@@ -31,15 +31,15 @@ const tune = (freqs) => {
     let off = Math.round((freqs[i] * 100) / inTune[i] - 100);
     if (freqs[i] == 0) {
       ans.push(" - ");
-    } else if (-1 < off && off < 1) {
+    } else if (off == 0) {
       ans.push("OK");
-    } else if (-3 <= off && off <= -1) {
+    } else if (off == -2 || off == -1) {
       ans.push(">•");
-    } else if (off < -3) {
+    } else if (off < -2) {
       ans.push(">>•");
-    } else if (1 <= off && off <= 3) {
+    } else if (off == 1 || off == 2) {
       ans.push("<•");
-    } else if (3 < off) {
+    } else if (off > 2) {
       ans.push("<<•");
     }
   }
