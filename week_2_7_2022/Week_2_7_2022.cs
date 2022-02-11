@@ -17,6 +17,11 @@
 
         // Wednesday Challenge 2
         Console.WriteLine("UniqueFract() -> " + UniqueFract());
+
+        // Friday Challenge
+        Console.WriteLine("Collatz(2) -> " + Collatz(2));
+        Console.WriteLine("Collatz(3) -> " + Collatz(3));
+        Console.WriteLine("Collatz(10) -> " + Collatz(10));
     }
 
     /*
@@ -118,5 +123,29 @@
             ans += fracts[i];
         }
         return ans;
+    }
+
+    /*
+     * Consider the following operation on an arbitrary positive integer:
+     * If n is even -> n / 2
+     * If n is odd -> n * 3 + 1
+     * Create a function to repeatedly evaluate these operations, until reaching 1.
+     * Return the number of steps it took. */
+    static int Collatz(int n)
+    {
+        int steps = 0;
+        while (n != 1)
+        {
+            if (n % 2 == 0)
+            {
+                n /= 2;
+            }
+            else if (n % 2 == 1)
+            {
+                n = n * 3 + 1;
+            }
+            steps++;
+        }
+        return steps;
     }
 }
