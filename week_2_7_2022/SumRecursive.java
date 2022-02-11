@@ -1,11 +1,10 @@
 package week_2_7_2022;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*
  * Write a function that finds the sum of an array. Make your function recursive.
  */
+/*
+// First Solution
 public class SumRecursive {
     
     public static void main(String[] args) {
@@ -39,6 +38,30 @@ public class SumRecursive {
         Integer[] ans = new Integer[numsList.size()];
         ans = numsList.toArray(ans);
         return recurse(ans);
+    }
+    
+}
+*/
+// Better Solution
+import java.util.Arrays;
+
+public class SumRecursive {
+    
+    public static void main(String[] args) {
+        System.out.println("sum([1, 2, 3, 4]) -> " + sum(new int[] {1, 2, 3, 4}));
+        System.out.println("sum([1, 2]) -> " + sum(new int[] {1, 2}));
+        System.out.println("sum([1] -> " + sum(new int[] {1}));
+        System.out.println("sum([]) -> " + sum(new int[] {}));
+    }
+    
+    private static int sum(int[] nums) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        if (nums.length == 1) {
+            return nums[0];
+        }
+        return nums[nums.length-1] + sum(Arrays.copyOf(nums, nums.length-1));
     }
     
 }
