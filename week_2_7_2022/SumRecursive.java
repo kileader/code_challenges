@@ -55,9 +55,7 @@ public class SumRecursive {
     }
     
     private static int sum(int[] nums) {
-        if (nums.length == 0) {
-            return 0;
-        }
+        if (nums.length == 0) return 0;
         return nums[nums.length-1] + sum(Arrays.copyOf(nums, nums.length-1));
     }
     
