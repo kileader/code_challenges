@@ -18,9 +18,6 @@ public class Pandigital {
         int largest = 918273645;
         outer: for (int i = 9876; i > 9182; i--) {
             String concat = Integer.toString(i) + Integer.toString(i*2);
-            if (concat.length() < 9) {
-                break;
-            }
             char[] arr = concat.toCharArray();
             for (int j = 0; j < 9; j++) {
                 for (int k = j+1; k < 9; k++) {
