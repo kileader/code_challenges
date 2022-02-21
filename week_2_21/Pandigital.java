@@ -15,7 +15,6 @@ public class Pandigital {
     }
     
     public static int pandigital() {
-        int largest = 918273645;
         outer: for (int i = 9876; i > 9182; i--) {
             String concat = Integer.toString(i) + Integer.toString(i*2);
             char[] arr = concat.toCharArray();
@@ -28,6 +27,6 @@ public class Pandigital {
             }
             return Integer.valueOf(concat);
         }
-        return largest;
+        return 918273645;
     }
 }
