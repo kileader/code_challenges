@@ -19,6 +19,9 @@ public class Pandigital {
             String concat = Integer.toString(i) + Integer.toString(i*2);
             char[] arr = concat.toCharArray();
             for (int j = 0; j < 9; j++) {
+                if (arr[j] == '0') {
+                    continue outer;
+                }
                 for (int k = j+1; k < 9; k++) {
                     if (arr[j] == arr[k]) {
                         continue outer;
