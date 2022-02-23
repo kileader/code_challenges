@@ -25,10 +25,8 @@ public class Josephus {
         }
         int index = i - 1;
         while (liveSoldiers.size() > 1) {
-            if (index > liveSoldiers.size() - 1) {
-                while (index > liveSoldiers.size() - 1) {
-                    index -= liveSoldiers.size();
-                }
+            while (index > liveSoldiers.size() - 1) {
+                index -= liveSoldiers.size();
             }
             liveSoldiers.remove(index);
             index += i - 1;
