@@ -1,5 +1,12 @@
 package week_3_14;
 
+/*
+ * 2) Implement a stack that has the following methods:
+ * push ( v a 1 ) : push v a 1 onto the stack
+ * pop: pop off and return the topmost element of the stack. If there are no elements in the stack, throw an error.
+ * max: return the maximum value in the stack currently. If there are no elements in the stack, throw an error.
+ * Each method should run in constant time.
+ */
 public class Stack {
     private Stack previous;
     private int value;
