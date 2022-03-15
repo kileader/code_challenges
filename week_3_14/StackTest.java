@@ -19,6 +19,8 @@ public class StackTest {
         System.out.println("myStack.max() -> " + myStack.max());
         myStack.push(100);
         System.out.println("myStack.max() -> " + myStack.max());
+        myStack.pop();
+        System.out.println("myStack.max() -> " + myStack.max());
         Stack emptyStack = new Stack();
         System.out.println("emptyStack.pop() -> " + emptyStack.pop());
 //        System.out.println("emptyStack.max() -> " + emptyStack.max());

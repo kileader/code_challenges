@@ -8,23 +8,27 @@ package week_3_14;
  * Each method should run in constant time.
  */
 public class Stack {
+    
     private Stack previous;
     private int value;
+    private int maxValue;
+    private boolean redoMax;
     
     Stack() {}
     
     Stack(int value) {
-        this.value = value;
+        setValueAndMax(value);
+        redoMax = false;
     }
     
     Stack(Stack previous, int value) {
         this.previous = previous;
-        this.value = value;
+        setValueAndMax(value);
     }
     
     public void push(int value) {
         this.previous = new Stack(this.previous, this.value);
-        this.value = value;
+        setValueAndMax(value);
     }
     
     public int pop() {
@@ -32,6 +36,7 @@ public class Stack {
             throw new IllegalArgumentException("Stack is empty");
         }
         int top = this.value;
+        if (maxValue == top) redoMax = true;
         this.value = this.previous.value;
         this.previous = this.previous.previous;
         return top;
@@ -41,6 +46,16 @@ public class Stack {
         if (this.previous == null) {
             throw new IllegalArgumentException("Stack is empty");
         }
+        if (redoMax) setMaxLongWay();
+        return maxValue;
+    }
+    
+    private void setValueAndMax(int value) {
+        if (maxValue < value) maxValue = value;
+        this.value = value;
+    }
+    
+    private void setMaxLongWay() {
         Stack clone = this;
         int top = clone.pop();
         int max = top;
@@ -50,6 +65,8 @@ public class Stack {
                 max = top;
             }
         }
-        return max;
+        redoMax = false;
+        maxValue = max;
     }
+    
 }
