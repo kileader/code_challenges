@@ -12,10 +12,11 @@ public class StringCompression {
         System.out.println("compressString(\"a\") -> " + compressString("a"));
         System.out.println("compressString(\"ddffciii\") -> " + compressString("ddffciii"));
         System.out.println("compressString(\"zzzzzzzzzzza\") -> " + compressString("zzzzzzzzzzza"));
+        System.out.println("compressString(\"\") -> " + compressString(""));
     }
     
     static String compressString(String input) {
-        if (input.length() == 1) {
+        if (input.length() <= 1) {
             return input;
         }
         StringBuilder sb = new StringBuilder();
