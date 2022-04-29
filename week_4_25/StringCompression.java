@@ -27,14 +27,14 @@ public class StringCompression {
         for (int i = 1; i < input.length(); i++) {
             if (chars[i] == prevLetter) {
                 count++;
-                if (i == input.length() - 1) {
-                    sb.append(count);
-                }
             } else {
                 sb.append(count);
                 prevLetter = chars[i];
                 sb.append(chars[i]);
                 count = 1;
+            }
+            if (i == input.length() - 1) {
+                sb.append(count);
             }
         }
         if (sb.length() >= input.length()) {
